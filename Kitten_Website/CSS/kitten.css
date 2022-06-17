@@ -3,11 +3,11 @@
     text-align: center;
     font-size: 45px;
     color: #FF7FAA;
-    background-color:#947FFF;
+    background-color:#7FFFD4;
     text-align: center;
     padding: 20px;
     outline-style: solid;
-    outline-color: #EAFF7F;
+    outline-color: #FF7FAA;
   }  
 
   h1 {
@@ -16,15 +16,11 @@
     color: #FF7FAA;
   } 
 
-  .h2 {
-    font-family: 'Lato', sans-serif;
-  }
-  
   p {
     font-family: 'Lato', sans-serif;
     text-align: center; 
     font-size: 20px;
-    color: whitesmoke; 
+    color: #947FFF; 
     } 
 
   .p1 {
@@ -94,7 +90,7 @@
   width: 50%; /* This ensures the column takes up half of the page width (I want it to take up the entire row but if I want to change it, it'll go to 50 */
   padding: 1.6%;
   height: 450px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-  background-color:  #7FFFD4; /* Sets the background color of the left columns */
+  background-color:  whitesmoke; /* Sets the background color of the left columns */
 }
 
 .Column_2 {
@@ -102,7 +98,7 @@
   width: 50%;
   padding: 1.6%;
   height: 450px;
-  background-color: #7FFFD4;
+  background-color:whitesmoke;
   text-align: center;
 }  
 
@@ -197,7 +193,7 @@ clear: both; /* This clears any other elements from floating on the left or the 
 
 /* Slideshow text */
 .text {
-  color: #EAFF7F; 
+  color:black; 
   padding: 1vw;
   position: absolute; /* This ensures the text is positioned within the image */
   bottom: 0; /* This property sets the text at the bottom of the image */
@@ -207,7 +203,7 @@ clear: both; /* This clears any other elements from floating on the left or the 
   font-size: 1.5vw; /* Font size is relative to the size of the viewport width */
   background-color: #947FFF; /* Gives a slightly transparent black background */
   font-weight: bold;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Megrim', cursive; 
   border-radius: 0px 0px 7px 7px; /* Gives the text background rounded corners on the bottom left and right corners */
 }
 
@@ -246,4 +242,197 @@ clear: both; /* This clears any other elements from floating on the left or the 
   from {opacity: .4;} /* Image starts transparent */
   to {opacity: 1;} /* Image ends opaque */
 }
-/***** End Slideshow Styling *****/
+/***** End Slideshow Styling *****/ 
+
+/***** Contact Form Styling *****/
+/* Button used to open the contact form - fixed at the bottom of the page */
+.Pop_Up_Button {
+  position: fixed; /* The element is positioned relative to the viewport and stays in the same location no matter what */
+  bottom: 1.75vw; /* Positions the button slightly up from the bottom of the viewport */
+  right: 1.75vw; /* Positions the viewport slightly right from the side of the viewport */
+  width: 25vw; /* Sets the width relative to the viewport width */
+  background-color: #947FFF; /* Sets the background color of the button to white */
+  color: black; /* Sets the color of the button text to black */
+  border: solid black; /* This makes a solid black border around the button */
+  cursor: pointer; /* This changes the cursor when hovered over the button to a pointer */
+  -webkit-animation: movePopup 5s; /* Animation for 5 seconds for Safari 4.0-8.0 */
+  animation: movePopup 5s; /* Animation set for 5 seconds */
+}
+
+/* movePopup animation moves the button from off the right side of the screen to its fixed location on the viewport */
+@keyframes movePopup {
+  from {right: -40vw;} 
+  to {right: 1.75vw;}
+}
+
+@-webkit-keyframes movePopup {
+  from {right: -40vw;} 
+  to {right: 1.75vw;}
+}
+
+/* Styling for the contact form */
+.form-popup {
+  z-index: 8; /* This z-index ensures the contact form shows above all other elements on the page */
+  display: none; /* Set the display to none, we will use JavaScript to show the contact form */
+  position: fixed; /* The form stays in the same location no matter what */
+  bottom: .5vw; /* Slightly up from the bottom of the viewport */
+  right: .5vw; /* Slightly in from the right side of the viewport */
+}
+
+/* Form styling */
+.form-container {
+  max-width: 49vw; /* Relative sizing of the form container - 49% of the viewport width */
+  padding: 1vw; /* Adds padding between the form-popup and the form-container */
+  background-color: #947FFF; 
+}
+
+/* Input fields */
+.form-container input[type=text] {
+  width: 100%; /* The input boxes completely fill the width of the form-container */
+  padding: .93vw; /* Adds padding to the input boxes */
+  margin: .6vw 0 .6vw 0; /* Adds space between the input boxes and the labels */
+  border: none; /* Removes the border from the input boxes */
+  background: whitesmoke; /* Sets the background color of the input boxes */
+  font-size: 1vw; /* Relative font sizing based on the width of the viewport */
+}
+
+/* General styling for all buttons */
+button {
+  font-family: 'Megrim', cursive; 
+  letter-spacing: .3vw; /* Adds slight spacing between the letters */
+  font-size: 1.5vw; /* Relative sizing of text */
+  font-weight: bold; 
+  padding: 1.5vw; /* Adds padding to the text in the button */
+  cursor: pointer; /* Changes the cursor to pointer over button elements */
+  width: 100%; /* Sets the width of the buttons to 100% of their containers */
+  height: auto; /* Allows the height to be resized depending on the content showing */
+}
+
+/* Hover effect for contact and submit buttons */
+button:hover, .form-container .btn:hover {
+  color: white; /* This makes the text in the buttons white when hovered over */
+  background-color: #FF7FAA; /* The background of the button changes to black when hovered over */
+  transition-duration: 1s; /* This makes the transition last 1 second */
+  -webkit-transition-duration: 1s; /* For Safari 4.0-8.0 */
+  border-color: silver; /* The border turns silver when the button is hovered over */
+}
+
+/* Submit button */
+.form-container .btn {
+  background-color: white; 
+  color: black;
+  border-color: black;
+  margin-bottom: 1vh; /* Adds space between the submit button and the close button */
+}
+
+/* Close button */
+.form-container .cancel {
+  background-color: whitesmoke;
+  color: black;
+  border-color: gray;
+}
+
+/* Styling for close button on hover */
+.form-container .cancel:hover {
+  color: white;
+  background-color: black;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  border-color: black;
+}
+/***** End of Contact Form Styling *****/
+
+/***** Media Query Section *****/
+/*Media rules for paragraph font size for different screen sizes*/
+@media screen and (max-width: 527px) {
+  p {
+      font-size: 3.75vw;
+  }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+  p {
+      font-size: 3.5vw;
+  }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+  p {
+      font-size: 2.75vw;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+  p {
+      font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+  p {
+      font-size: 2.25vw;
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+  p {
+      font-size: 2vw;
+  } 
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+  p {
+      font-size: 1.75vw;
+  }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+  p {
+      font-size: 1.5vw;
+  }
+}
+
+@media screen and (min-width: 2270px) {
+  p {
+      font-size: 1.35vw;
+  }
+}
+
+/*Media rule for navbar links for different screen sizes*/
+/* Screens 1080px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 1080px) {
+  .Navbar a{
+      width: 20%; /* This sets each navbar link to 1/5 of the navbar */
+      font-size: 2.5vw;
+  }
+}
+
+/* Media rules to enlarge the font of the white text for smaller screens */
+@media screen and (max-width: 1080px) {
+  .quote{
+      font-size: 3.5vw;
+  }
+
+  .white-text {
+      font-size: 4.5vw;
+  }
+}
+
+/* Media rules to increase the size of the columns for larger screens */
+@media screen and (min-width: 1725px) {
+  .Column_1 {
+      height: 550px;
+  }
+  .Column_2 {
+      height: 550px;
+  }
+}
+
+
+/*Media rule to remove margin-top from h1 elements for extra large screens (so that the paragraph text fits in the column*/
+@media screen and (min-width: 2000px) {
+  h1{
+      margin-top: 0;
+  }
+}
+/***** End of Media Query Section *****/
