@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kittens</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Megrim&display=swap" rel="stylesheet">        <link rel="stylesheet" href="/Kitten_Website/CSS/kitten.css">
+    </head> 
+    <body>
+    <div>
+        <!-- Navbar -->
+        <div class="Navbar">
+          <a class="active" href="#Home">Home</a>
+          <!-- New section added -->
+          <a href="#About">About</a>
+          <a href="#Pics">Kitten Pics</a>
+          <!-- Onclick and ondblclick functions added to open and close the contact form -->
+          <a onclick="openForm()" ondblclick="closeForm()" class="contact">Let's Connect!</a>
+      </div>
+    </div>
+    <div class="header" id="Home">
+    <h1>MEOW!</h1>
+    <p>Crazy, cute kittens looking for friends.</p>
+    </div>      
+    <!--Kitten Pics-->  
+      <div class="Column_2" id="Pics">
+          <div class="row"> 
+          <h1 class="h2">Kitten Pics!</h1>
+            <div id="Slideshow_Container">
+              <!-- Slide 1 of 6 -->
+              <div class="mySlides fade">
+                  <img class="Slideshow_Images" src="/Kittens/cat1.jpg" style="width:100%;" alt="This is me!">
+                  <div class="text">This is Tim</div>
+              </div>
+              <!-- Slide 2 of 6 -->
+              <div class="mySlides fade">
+                  <img class="Slideshow_Images" src="/Kittens/cat2.jpg" style="width:100%;" alt="HTML, CSS, and JS logos"> 
+                  <div class="text">This is Charlotte!</div>
+              </div>
+              <!-- Slide 3 of 6 -->
+              <div class="mySlides fade">
+                  <img class="Slideshow_Images" src="/Kittens/cat3.jpg" style="width:100%;" alt="Python logo">
+                  <div class="text">This is Beth!</div>
+              </div>
+              <!-- Slide 4 of 6 -->
+              <div class="mySlides fade">
+                  <img class="Slideshow_Images" src="/Kittens/cat4jpg.jpg" style="width:100%;" alt="C# logo">
+                  <div class="text">Meet Todd!</div>
+              </div>
+              <!-- Previous and next buttons -->
+              <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br> <!-- Adds a space between the slideshow images and the dots -->
+          
+          <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+          <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span> 
+              <span class="dot" onclick="currentSlide(5)"></span> 
+              <span class="dot" onclick="currentSlide(6)"></span> 
+          </div>
+          </div>
+            </div>
+        <!-- About Section--> 
+        <div class="Column_1" id="About">
+          <div class="row">
+        <h1 class="h2">This Cat thing...</h1>
+        <p class="p1">We've been raising kittens and finding<br>
+        great homes for them since 2017! We<br>
+      make sure the kittens have all of their shots<br>
+    and are litter-trained before going home with you!</p1>
+  <script src="JS/kitten.js"></script>
+    </body>
+</html>

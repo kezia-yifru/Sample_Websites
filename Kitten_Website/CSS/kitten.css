@@ -1,0 +1,249 @@
+.header {
+    font-family: 'Megrim', cursive; 
+    text-align: center;
+    font-size: 45px;
+    color: #FF7FAA;
+    background-color:#947FFF;
+    text-align: center;
+    padding: 20px;
+    outline-style: solid;
+    outline-color: #EAFF7F;
+  }  
+
+  h1 {
+    font-family: 'Megrim', cursive; 
+    text-align: center; 
+    color: #FF7FAA;
+  } 
+
+  .h2 {
+    font-family: 'Lato', sans-serif;
+  }
+  
+  p {
+    font-family: 'Lato', sans-serif;
+    text-align: center; 
+    font-size: 20px;
+    color: whitesmoke; 
+    } 
+
+  .p1 {
+    font-family: 'Lato', sans-serif; 
+    color:black; 
+    font-size: 20px;
+  }
+
+  .Navbar {
+    overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+    background-color: #7FFFD4; /* This colors the navbar */
+    position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+    top: 0; /* This ensures no space is displayed above the navbar */
+    width: 100%; /* This makes the navbar span the entire width of the page */
+    z-index: 1; /* This ensures other elements don't display over the navbar */
+    -webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
+    animation: moveNav 5s; /* This makes the moveNav animation last 5 seconds */
+}
+
+/* The animation effect for moving the nav bar in from above the left of the screen on page load */
+@keyframes moveNav {
+    from {left: -100vw;} /* The navbar is starting off screen to the left */
+    to { left: 0vw;} /* This moves the navbar into place on the screen */
+}
+
+/*Navbar Links */
+.Navbar a {
+    float: left; /* This specifies that the text floats on the left on the navbar */
+    display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
+    color: #FF7FAA; /* This is the font color for text on our navbar */
+    padding: .75vw 1vw; /* This adds padding around our text */
+    text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
+    font-size: 2.5vw; /* This specifies the font size for text on our navbar */
+    font-family: 'Megrim', cursive;
+    text-align: center; /* This centers the text within its container */
+    position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
+    -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
+    animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */ 
+}
+
+/* The animation effect for moving the nav bar links in from above the top of the screen on page load */
+@keyframes moveNavText {
+    from {top: -100vw;} /* This sets the navbar text 100% above the viewport */
+    to {top: 0vw;} /* This lowers the navbar text onto the navbar */
+}
+
+/*Navbar hover effects */
+.Navbar a:hover {
+    background-color: ; /* Defines the background color that will display when you hover over the link */
+    color: #FF7FAA ; /* This defines the font color that will display when navbar a elements are hovered over */
+    font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+    cursor: pointer;
+    transition: 0.5s ease-in; /* Creates a smooth transition for the hover trigger */
+}
+
+/* Navbar home button */
+.Navbar a.active { /* This targets the a element on the navbar with the "active" class */
+    background-color: #947FFF;
+}
+/***** End of Navbar Styling *****/
+* { /*The asterisk is a universal selector that applies this effect to all elements on the page */
+  box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+} 
+
+.Column_1 {
+  float: left;
+  width: 50%; /* This ensures the column takes up half of the page width (I want it to take up the entire row but if I want to change it, it'll go to 50 */
+  padding: 1.6%;
+  height: 450px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
+  background-color:  #7FFFD4; /* Sets the background color of the left columns */
+}
+
+.Column_2 {
+  float: left;
+  width: 50%;
+  padding: 1.6%;
+  height: 450px;
+  background-color: #7FFFD4;
+  text-align: center;
+}  
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* This inserts something after the content of selected elements (in this case the elements with class "Row") */
+.Row:after {
+ /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+clear: both; /* This clears any other elements from floating on the left or the right of an element */
+} 
+
+/***** Slideshow Styling *****/
+#Slideshow_Background {
+  background:#EAFF7F; /* This creates a slightly transparent white background that's palced over the video in the background */    
+}
+
+.mySlides{
+  display: none; /* This prevents the images from being displayed, we will use JS to display these */
+}
+
+/* Slideshow section / container */
+#Slideshow_Container {
+  width: 39.5vw; /* Relative sizing of the container for the slidewshow set to 39.5% of the viewport width */
+  height: auto; /* The height of the container is automatically adjusted based on the content it is displaying */
+  padding-top: 4%; /* Adds a small padding to the top of the slideshow container */
+  position: relative; /* This sets the container relative to its normal positioning */
+  margin:auto; /* This will horizontally center the container on the page */
+}
+
+/* Remove the underline from the previous and next buttons on the slideshow */
+#Slideshow_Container a {
+  text-decoration: none;
+} 
+
+
+/* Images contained within the slideshow */
+.Slideshow_Images {
+  vertical-align: middle; /* This centers the images vertically within the slideshow container */
+  height: 300px; /* The height of the images is automatically adjusted based on the content, ie if your images are different sizes, they will display as different sizes */
+  box-shadow: gainsboro; /* Adds a shadow around the slideshow images */
+  width: 100%; /* The width of the images is automatically adjusted based on the content */
+}
+
+/* Next and previous buttons */
+.Previous, .Next {
+  cursor: pointer; /* Changes the mouse to a pointer when the buttons are selected */
+  position: absolute; /* This makes the next and previous buttons positioned relative to the slideshow container */
+  top: 50%; /* This moves the buttons up in the slideshow container */
+  width: auto; /* The width of the buttons is automatically adjusted based on the content */
+  padding: 2vw; /* Adds padding equal to 2% of the viewport width */
+  color: #947FFF; 
+  font-weight: bold;
+  font-size: 1.5vw;
+  border-radius: 0 3px 3px 0; /* Adds a slightly rounded border on the top and bottom right corners */
+  user-select: none; /* This property makes it so that the user cannot highlight the text */
+  transition: 0.6s ease; /* This specifies the details of the hover transition for these elements */
+}
+
+.Previous {
+  left: 0;
+}
+/* Positioning the next button on the right hand side */
+.Next {
+  right: 0; /* This moves the next button to the right side of the slideshow container */
+  border-radius: 3px 0 0 3px; /* This changes the border radius on the next button to the top and bottom left of the button */
+}
+
+/* Hover effect on slide show buttons */
+.Previous:hover, .Next:hover {
+  background-color: #FF7FAA; /* Makes the background of the arrows a transparent gray color */
+  color: #EAFF7F; /* Makes the arrows white when hovered over */
+}
+
+/* Slideshow text */
+.text {
+  color: #EAFF7F; 
+  padding: 1vw;
+  position: absolute; /* This ensures the text is positioned within the image */
+  bottom: 0; /* This property sets the text at the bottom of the image */
+  width: 100%; /* The element covers the full width of the image */
+  text-align: center; /* The text is center aligned within the image */
+  letter-spacing: .1vw; /* This gives slight spacing between the letters */
+  font-size: 1.5vw; /* Font size is relative to the size of the viewport width */
+  background-color: #947FFF; /* Gives a slightly transparent black background */
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  border-radius: 0px 0px 7px 7px; /* Gives the text background rounded corners on the bottom left and right corners */
+}
+
+/* Styling of the dots under the slideshow */
+.dot {
+  cursor: pointer; /* The cursor changes to pointer when hovered over the dots */
+  height: 1vw; /* The dots are sized relative to the viewport width */
+  width: 1vw;
+  margin: .25vw; /* adds additional spacing between the dots */ 
+  background-color:#947FFF; /* Makes the dots white */
+  border-radius: 50%; /* Makes the dots circles by rounding each corner */
+  display: inline-block; /* Allows the dots to sit next to eachother rather than on a new line */
+  transition: background-color 0.6s ease; /* When clicked on the dots transition to a different color when clicked or hovered over (the affect is defined below) */
+  z-index: 1; /* This ensures the dots will be displayed above any other elements */
+}
+
+/* Hover effect for slideshow dots */
+.active, .dot:hover {
+  background-color: #FF7FAA; /* Sets the color of the dots when active or hovered over */
+}
+
+/* Fading animation for slideshow */
+.fade {
+  animation-name: fade; /* Fade animation is defined below */
+  animation-duration: 1.5s; /* The animation lasts 1.5 seconds */
+  -webkit-animation-name: fade; /* Same as above for Safari 4.0-8.0 */
+  -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4;} /* Image starts transparent */
+  to {opacity: 1;} /* Image ends opaque */
+}
+
+@keyframes fade {
+  from {opacity: .4;} /* Image starts transparent */
+  to {opacity: 1;} /* Image ends opaque */
+}
+/***** End Slideshow Styling *****/
