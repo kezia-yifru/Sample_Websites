@@ -1,7 +1,7 @@
 .header {
     font-family: 'Megrim', cursive; 
     text-align: center;
-    font-size: 45px;
+    font-size: 55px;
     color: #FF7FAA;
     background-color:#7FFFD4;
     text-align: center;
@@ -168,7 +168,7 @@ clear: both; /* This clears any other elements from floating on the left or the 
   top: 50%; /* This moves the buttons up in the slideshow container */
   width: auto; /* The width of the buttons is automatically adjusted based on the content */
   padding: 2vw; /* Adds padding equal to 2% of the viewport width */
-  color: #947FFF; 
+  color: black; 
   font-weight: bold;
   font-size: 1.5vw;
   border-radius: 0 3px 3px 0; /* Adds a slightly rounded border on the top and bottom right corners */
@@ -187,8 +187,8 @@ clear: both; /* This clears any other elements from floating on the left or the 
 
 /* Hover effect on slide show buttons */
 .Previous:hover, .Next:hover {
-  background-color: #FF7FAA; /* Makes the background of the arrows a transparent gray color */
-  color: #EAFF7F; /* Makes the arrows white when hovered over */
+  background-color: #947FFF; /* Makes the background of the arrows a transparent gray color */
+  color: black; /* Makes the arrows white when hovered over */
 }
 
 /* Slideshow text */
@@ -284,6 +284,7 @@ clear: both; /* This clears any other elements from floating on the left or the 
   max-width: 49vw; /* Relative sizing of the form container - 49% of the viewport width */
   padding: 1vw; /* Adds padding between the form-popup and the form-container */
   background-color: #947FFF; 
+  font-family: 'Lato', sans-serif;
 }
 
 /* Input fields */
@@ -293,6 +294,7 @@ clear: both; /* This clears any other elements from floating on the left or the 
   margin: .6vw 0 .6vw 0; /* Adds space between the input boxes and the labels */
   border: none; /* Removes the border from the input boxes */
   background: whitesmoke; /* Sets the background color of the input boxes */
+  font-family: 'Lato', sans-serif;
   font-size: 1vw; /* Relative font sizing based on the width of the viewport */
 }
 
