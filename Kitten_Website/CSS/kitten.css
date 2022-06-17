@@ -78,7 +78,7 @@
 
 /* Navbar home button */
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: #947FFF;
+    background-color: #7FFFD4;
 }
 /***** End of Navbar Styling *****/
 * { /*The asterisk is a universal selector that applies this effect to all elements on the page */
