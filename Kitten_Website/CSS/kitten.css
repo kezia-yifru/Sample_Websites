@@ -213,7 +213,7 @@ clear: both; /* This clears any other elements from floating on the left or the 
   height: 1vw; /* The dots are sized relative to the viewport width */
   width: 1vw;
   margin: .25vw; /* adds additional spacing between the dots */ 
-  background-color:#947FFF; /* Makes the dots white */
+  background-color:#947FFF; /* Makes the dots purple */
   border-radius: 50%; /* Makes the dots circles by rounding each corner */
   display: inline-block; /* Allows the dots to sit next to eachother rather than on a new line */
   transition: background-color 0.6s ease; /* When clicked on the dots transition to a different color when clicked or hovered over (the affect is defined below) */
