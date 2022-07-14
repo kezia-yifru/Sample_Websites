@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<audio id="myAudio">
+<source src="/Lion-Roar/Sound/lionroar.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<p>Click the lion to play the audio.</p>
+<button onclick="playAudio()" type="button">Play Audio</button>
+<img src="/Lion-Roar/Images/lion.jpg">
+<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+</script>
+
+</body>
+</html>
