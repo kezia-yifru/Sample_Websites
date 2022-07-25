@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <!-- Head -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>kezia yifru</title>
+        <link rel="stylesheet" type="text/css" href="portfolio.css">
+        </head> 
+<!-- Body background image of cassia tree flower is centered, large text at middle -->
+<body> 
+  <section class="header" id="home">
+    <div class="tracking-in-contract">
+        <h1>K E Z I A &nbsp; Y I F R U</h1>
+        <h3 style="font-weight: normal;">hi there, I do ux/ui design</h3>
+    </div>
+  </section>
+<!--HEADER-->
+
+<!--Nav Bar--> 
+<ul>
+    <li><a href="#home">home</a></li>
+    <li><a href="#about">about</a></li>
+    <li><a href="#projects">projects</a></li>
+</ul>
+<!--NAV BAR-->
+
+<!--SECTION-->      
+  <!--About-->  
+ <div class="row_1" id="about">
+    <div class="column">
+      <h1 style="text-align:left">A B O U T &nbsp; M E</h1>
+      <div class="slide-in-elliptic-left-bck">
+        <img src= "kezia.JPG" alt="Here I am!" class="rounded-corners"></div>
+    </div>
+
+    <div class="column">
+      <p>My name is Kezia</p>
+    </div>
+  </div>
+      <div class="row_2" id="projects">
+      <div class="column">
+          <h1>P R O J E C T S</h1>
+          <p>and check out more at github.com!</p>
+        </div>
+    <div class="column">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor id aliquet lectus proin nibh. Tortor at auctor urna nunc id. Id venenatis a condimentum vitae. Ut etiam sit amet nisl purus in. Sagittis eu volutpat odio facilisis mauris sit. Nulla malesuada pellentesque elit eget gravida cum. Massa tincidunt nunc pulvinar sapien et. Dis parturient montes nascetur ridiculus mus mauris. Elementum nisi quis eleifend quam adipiscing vitae proin. Urna nunc id cursus metus aliquam eleifend mi in. Aliquam eleifend mi in nulla posuere sollicitudin aliquam.</p>
+    </div>
+  </div>
+  </div> 
+
+<!--END OF SECTION-->
+
+<!--Contact Form-->
+<div id="Contact">
+  <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+  <div class="form-popup" id="myForm">
+       <form action="https://formspree.io/f/mayvayqg" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+           <h1>Contact</h1>
+           <label for="name"><b>Name</b></label>
+             <input type="text" placeholder="Type your name here" name="name" required>
+           <label for="phone"><b>Phone</b></label>
+             <input type="text" placeholder="Type your phone number here" name="phone">
+           <label for="email"><b>Email</b></label>		
+             <input type="text" placeholder="Type your email address here" name="email" required>
+           <label for="message"><b>Message</b></label>
+             <input type="text" placeholder="Type your message here" name="message">
+
+           <button type="submit" class="btn">SUBMIT</button>
+           <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+       </form>
+  </div>
+</div>
+<!-- Contact Form-->
+<div class="footer"></div>
+<script src="portfolio.js"></script>
+</body>  
+ </html>  
